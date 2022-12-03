@@ -7,10 +7,6 @@ new Swiper(".swiper-container", {
   autoplay: true,
   grabCursor: true,
   effect: "coverflow",
-  navigation: {
-    // nextEl: ".swiper-button-next",
-    // prevEl: ".swiper-button-prev",
-  },
   pagination: {
     el: ".swiper-pagination",
   },
@@ -56,7 +52,7 @@ let restaurants = [];
 let openStatus = false;
 let goodsVisible = false;
 
-let users = [{ login: "pr4-17@gmail.com", password: "12345678" }];
+let users = [{ login: "artem200330@gmail.com", password: "1234567" }];
 
 const getData = async (url) => {
   const response = await fetch(url);
@@ -224,7 +220,7 @@ const toggleModalCart = () => {
 
 (() => {
   inputSearch.addEventListener("keypress", (event) => {
-    if (event.charCode === 13) {
+    if (event.charCode === 13 && inputSearch.value !== "") {
       getData("./db/partners.json")
         .then((data) => data.map((partner) => partner.products))
         .then((links) => {
@@ -308,7 +304,7 @@ const toggleModalCart = () => {
     if (authStatus === false) {
       toggleModalAuth();
     } else {
-      if (confirm("Підтвердіть вихід із системи") === true) {
+      if (confirm("Вы хотите разлогиниться?") === true) {
         localStorage.setItem("authStatus", false);
         localStorage.setItem("authData", null);
         authStatus = false;
