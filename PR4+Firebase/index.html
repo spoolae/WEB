@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="styles/reset.css" />
+    <link rel="stylesheet" type="text/css" href="styles/style.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="styles/restaurant_styles.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.compat.css"
+    />
+    <title>Home</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <img src="img/logo.svg" alt="logo" class="logo_pic" />
+
+        <input
+          class="serch_input"
+          type="text"
+          name="search"
+          placeholder="Адрес доставки"
+        />
+        <div class="buttons">
+          <span class="user_name"></span>
+          <button class="but cart_but">Корзина</button>
+          <button class="but login_but">Войти</button>
+          <button class="but logout_but">Выйти</button>
+        </div>
+      </header>
+
+      <section class="swiper">
+        <div class="swiper-wrapper">
+          <div class="ad pizza swiper-slide">
+            <div class="ad_text">
+              <h2 class="ad_title">Онлайн-сервис доставки еды на дом</h1>
+              <p class="ad_subtitle">
+                Блюда из любимого ресторана привезет курьер в перчатках, маске и с
+                антисептиком
+              </p>
+            </div>
+          </div>
+          <div class="ad kebab swiper-slide">
+            <div class="ad_text">
+              <h2 class="ad_title">Шашлыки на майские <br> со скидкой 35%</h1>
+              <p class="ad_subtitle">
+                Закажите шашлыки в любом ресторане до 10 мая и получите скидку по промокоду OMAGAD
+              </p>
+            </div>
+          </div>
+          <div class="ad vegetables swiper-slide">
+            <div class="ad_text">
+              <h2 class="ad_title">Скидка 20% на всю еду <br> по промокоду LOVE.JS</h1>
+              <p class="ad_subtitle">
+                Блюдо из ресторана привезут вместе с двумя подарочными книгами по фронтенду
+              </p>
+            </div>
+          </div>
+          <div class="ad sushi swiper-slide">
+            <div class="ad_text">
+              <h2 class="ad_title">Сеты со скидкой до 30% <br> в ресторанах</h1>
+              <p class="ad_subtitle">
+                Скидки на сеты до 30 мая по промокоду DADADA
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </section>
+      
+
+      <section class="rest_cards">
+        <div class="rest_heading">
+          <h2 class="rest_title">Рестораны</h2>
+          <input
+            class="rest_search"
+            type="text"
+            name="search"
+            placeholder="Поиск блюд и рестаранов"
+          />
+        </div>
+        <!-- restaurant cards -->
+        <div class="r_cards"></div>
+        <!-- end cards -->
+      </section>
+      <!-- product cards -->
+      <section class="food hide">
+        <div class="food_heading"></div>
+        <div class="food_cards"></div>
+      </section>
+      <!-- end cards -->
+    </div>
+    <footer>
+      <div class="footer_wrap">
+        <a href="index.html" class="logo_link"
+          ><img src="img/logo.svg" alt="logo" class="logo_pic"
+        /></a>
+        <nav>
+          <ul class="footer_info">
+            <li>
+              <a href="restaurants.html" class="info_link"> Ресторанам</a>
+            </li>
+            <li><a href="!#" class="info_link"> Курьерам</a></li>
+            <li><a href="!#" class="info_link">Пресс-центр </a></li>
+            <li><a href="!#" class="info_link"> Контакты</a></li>
+          </ul>
+        </nav>
+        <div class="medias">
+          <a href="!#" class="media_link"
+            ><img src="img/media-pic-1.svg" alt="logo" class="logo_pic"
+          /></a>
+          <a href="!#" class="media_link"
+            ><img src="img/media-pic-2.svg" alt="logo" class="logo_pic"
+          /></a>
+          <a href="!#" class="media_link"
+            ><img src="img/media-3.svg" alt="logo" class="logo_pic"
+          /></a>
+        </div>
+      </div>
+    </footer>
+
+    <div class="modal animated fadeInRight delay-0.5s modal_auth">
+      <div class="modal_dialog">
+        <div class="modal_header">
+          <h3 class="modal_title">Войти</h3>
+          <button class="modal_close">X</button>
+        </div>
+        <form id="login_form">
+          <div class="txt_field">
+            <input
+              class="login_input"
+              id="user_name"
+              type="text"
+              name="username"
+              placeholder="Username"
+            />
+          </div>
+          <div class="txt_field">
+            <input
+              class="login_input"
+              id="password"
+              type="password"
+              name="password"
+              placeholder="Password"
+            />
+          </div>
+          <div class="error">*</div>
+          <input class="enter_but" type="submit" value="Войти" />
+        </form>
+      </div>
+    </div>
+
+       <div class="modal animated fadeInRight delay-0.5s modal_cart">
+      <div class="modal_dialog">
+        <div class="modal_header">
+          <h3 class="modal_title">Корзина</h3>
+          <button class="modal_close_cart">X</button>
+        </div>
+        <div class="modal_products">
+          
+        </div>
+        <div class="modal_footer">
+          <p class="modal_total"></p>
+          <div class="buttons">
+            <button class="footer_but order_but">Оформить заказ</button>
+            <button class="footer_but cancel_but">Отмена</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/wow.min.js"></script>
+    <script src="js/main.js" type="module"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  </body>
+</html>
