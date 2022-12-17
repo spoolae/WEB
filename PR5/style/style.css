@@ -62,6 +62,9 @@ label span {
 
 .modal-content {
     background: #E0FFFF;
+    /* color: #3CB371; */
+    /* -webkit-text-stroke-width: 1px; */
+    /* -webkit-text-stroke-color: black;  */
 }
 
 .btn-outline-danger {
